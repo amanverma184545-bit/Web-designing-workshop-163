@@ -1,11 +1,16 @@
-const buttons = document.querySelectorAll(".buy-btn");
+function checkNumber() {
+    let num = document.getElementById("num").value;
 
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        alert("Product added to cart!");
-    });
-});
-
-document.querySelector(".login-btn").addEventListener("click", () => {
-    alert("Login Page Coming Soon!");
-});
+    if (num == "") {
+        document.getElementById("result").innerHTML =
+            "Please enter a number";
+    }
+    else if (num % 2 == 0) {
+        document.getElementById("result").innerHTML =
+            "Number is Even";
+    }
+    else {
+        document.getElementById("result").innerHTML =
+            "Number is Odd";
+    }
+}
